@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Body Mass Index Calculator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(104, 134, 226);
+      }
+      fieldset {
+        width: 50%;
+        margin: auto;
+        height: 500px;
+        margin-top: 7%;
+        box-shadow: 0 0 10px black;
+        border-radius: 10px;
+      }
+      legend {
+        color: white;
+        font-size: 1.1rem;
+        margin-left: 10%;
+        font-family: sans-serif;
+        font-weight: 600;
+        text-shadow: 0 0 5px rgb(173, 24, 24);
+        letter-spacing: 2px;
+      }
+      .wrapper {
+        width: 70%;
+        height: 30vh;
+        background-color: white;
+        margin: 12% 0 0 8%;
+        position: relative;
+        border-radius: 15px;
+        border: 3px solid rgb(119, 152, 165);
+        box-shadow: 0 0 20px;
+      }
+      .result {
+        position: absolute;
+        width: 200px;
+        height: 155px;
+        background-color: rgb(224, 214, 214);
+        left: 80%;
+        top: 11%;
+        border-radius: 7%;
+        border: 1px solid rgb(119, 152, 165);
+        box-shadow: 0 0 10px;
+        padding: 2%;
+      }
+      .result p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        font-weight: 800;
+      }
+      .result p span {
+        color: red;
+        padding: 2%;
+      }
+      .result h2 {
+        padding: 10%;
+        text-align: center;
+        font-size: 2rem;
+      }
+      .inp {
+        margin: 0.5% 0 0 5%;
+        padding: 2%;
+        width: 50%;
+        outline: none;
+        border: none;
+        background-color: rgb(226, 226, 229);
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: rgb(32, 0, 121);
+      }
+
+      label {
+        display: block;
+        margin: 2% 0 0 5%;
+        color: hotpink;
+        font-family: Arial, Helvetica, sans-serif;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+      #Cal {
+        display: block;
+        margin: 4% 9%;
+        width: 20%;
+        padding: 1%;
+        background-color: hotpink;
+        box-shadow: 0 0 5px;
+        border: none;
+        color: white;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        border-radius: 3px;
+      }
+      #Cal:hover {
+        background-color: royalblue;
+        transition: 1s;
+        cursor: pointer;
+      }
+      h1 {
+        font-size: 1.2rem;
+        font-family: sans-serif;
+        padding: 1% 0 0 5%;
+      }
+      h1 span {
+        color: hotpink;
+      }
+      .bmi-range {
+        margin: 5% 30%;
+      }
+      .bmi-range p {
+        font-family: sans-serif;
+        line-height: 1.5rem;
+      }
+      .eror {
+        color: red;
+        height: 2vh;
+        font-weight: 700;
+        margin-left: 5%;
+        font-size: 0.7rem;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Body Mass Index Calculator</legend>
+      <section class="wrapper">
+        <form action="#" onsubmit="bmi()">
+          <h1>
+            Please enter height <span>[cm]</span> and Weight <span>[kg]</span>
+          </h1>
+          <label for="height">Height :</label>
+
+          <input class="inp" id="h" type="text" />
+          <div class="eror"><p id="hErorr"></p></div>
+          <label for="weight">Weight :</label>
+          <input class="inp" id="w" type="text" />
+          <div class="eror"><p id="wErorr"></p></div>
+          <input id="Cal" type="submit" value="Calculate" />
+        </form>
+        <div class="result">
+          <p><span>*</span>Your BMI is :</p>
+          <h2 id="finalresult"></h2>
+        </div>
+      </section>
+      <div class="bmi-range">
+        <p>‣ Under Weight: < 18.5</p>
+        <p>‣ Healthy Weight: 18.5 - 24.5</p>
+        <p>‣ Over Weight: 25 - 29</p>
+      </div>
+    </fieldset>
+
+    <script>
+      function bmi() {
+        let height = document.getElementById("h").value;
+        let weight = document.getElementById("w").value;
+        let bmi = weight / (((height / 100) * height) / 100);
+        let total = bmi.toFixed(2);
+        document.getElementById("finalresult").innerHTML = total;
+
+        // validation
+
+        if (height == "") {
+          document.getElementById("hErorr").innerHTML =
+            "** Please inter height";
+        }
+        if (weight == "") {
+          document.getElementById("wErorr").innerHTML =
+            "** Please inter weight";
+        }
+      }
+    </script>
+  </body>
+</html>
