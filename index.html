@@ -4,178 +4,95 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Body Mass Index Calculator</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        background-color: rgb(104, 134, 226);
-      }
-      fieldset {
-        width: 50%;
-        margin: auto;
-        height: 500px;
-        margin-top: 7%;
-        box-shadow: 0 0 10px black;
-        border-radius: 10px;
-      }
-      legend {
-        color: white;
-        font-size: 1.1rem;
-        margin-left: 10%;
-        font-family: sans-serif;
-        font-weight: 600;
-        text-shadow: 0 0 5px rgb(173, 24, 24);
-        letter-spacing: 2px;
-      }
-      .wrapper {
-        width: 70%;
-        height: 30vh;
-        background-color: white;
-        margin: 12% 0 0 8%;
-        position: relative;
-        border-radius: 15px;
-        border: 3px solid rgb(119, 152, 165);
-        box-shadow: 0 0 20px;
-      }
-      .result {
-        position: absolute;
-        width: 200px;
-        height: 155px;
-        background-color: rgb(224, 214, 214);
-        left: 80%;
-        top: 11%;
-        border-radius: 7%;
-        border: 1px solid rgb(119, 152, 165);
-        box-shadow: 0 0 10px;
-        padding: 2%;
-      }
-      .result p {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        font-weight: 800;
-      }
-      .result p span {
-        color: red;
-        padding: 2%;
-      }
-      .result h2 {
-        padding: 10%;
-        text-align: center;
-        font-size: 2rem;
-      }
-      .inp {
-        margin: 0.5% 0 0 5%;
-        padding: 2%;
-        width: 50%;
-        outline: none;
-        border: none;
-        background-color: rgb(226, 226, 229);
-        font-size: 0.7rem;
-        font-weight: 600;
-        color: rgb(32, 0, 121);
-      }
-
-      label {
-        display: block;
-        margin: 2% 0 0 5%;
-        color: hotpink;
-        font-family: Arial, Helvetica, sans-serif;
-        letter-spacing: 1px;
-        font-weight: 600;
-      }
-      #Cal {
-        display: block;
-        margin: 4% 9%;
-        width: 20%;
-        padding: 1%;
-        background-color: hotpink;
-        box-shadow: 0 0 5px;
-        border: none;
-        color: white;
-        font-family: sans-serif;
-        letter-spacing: 1px;
-        border-radius: 3px;
-      }
-      #Cal:hover {
-        background-color: royalblue;
-        transition: 1s;
-        cursor: pointer;
-      }
-      h1 {
-        font-size: 1.2rem;
-        font-family: sans-serif;
-        padding: 1% 0 0 5%;
-      }
-      h1 span {
-        color: hotpink;
-      }
-      .bmi-range {
-        margin: 5% 30%;
-      }
-      .bmi-range p {
-        font-family: sans-serif;
-        line-height: 1.5rem;
-      }
-      .eror {
-        color: red;
-        height: 2vh;
-        font-weight: 700;
-        margin-left: 5%;
-        font-size: 0.7rem;
-      }
-    </style>
+    <title>Basic of media query</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Fira+Sans:ital@1&family=Josefin+Sans:wght@600;700&family=Montserrat:wght@100;300;400&family=Mukta:wght@500&family=Murecho:wght@900&family=Open+Sans:ital,wght@0,300;1,300&family=Outfit:wght@300&family=Raleway:ital,wght@1,200&family=Roboto:wght@300;400&family=Rowdies:wght@700&family=Rubik&family=Source+Code+Pro&family=Titillium+Web&family=Yuji+Boku&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fonts end -->
+    <!-- font awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/ffd161b5f3.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- fontawesome kit end -->
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <fieldset>
-      <legend>Body Mass Index Calculator</legend>
-      <section class="wrapper">
-        <form action="#" onsubmit="bmi()">
-          <h1>
-            Please enter height <span>[cm]</span> and Weight <span>[kg]</span>
-          </h1>
-          <label for="height">Height :</label>
-
-          <input class="inp" id="h" type="text" />
-          <div class="eror"><p id="hErorr"></p></div>
-          <label for="weight">Weight :</label>
-          <input class="inp" id="w" type="text" />
-          <div class="eror"><p id="wErorr"></p></div>
-          <input id="Cal" type="submit" value="Calculate" />
-        </form>
-        <div class="result">
-          <p><span>*</span>Your BMI is :</p>
-          <h2 id="finalresult"></h2>
-        </div>
-      </section>
-      <div class="bmi-range">
-        <p>‣ Under Weight: < 18.5</p>
-        <p>‣ Healthy Weight: 18.5 - 24.5</p>
-        <p>‣ Over Weight: 25 - 29</p>
+    <nav>
+      <div class="navLeft">
+        <h1>Company</h1>
       </div>
-    </fieldset>
+      <div class="navMid"><i class="fas fa-bars"></i></div>
+      <div class="navRight">
+        <ul>
+          <li><a href="#"></a>Home</li>
+          <li class="click">
+            <a href="#"></a>About
+            <span>
+              <i class="fas fa-angle-down subclick"></i>
+            </span>
+            <div class="subNav">
+              <ul>
+                <li>About me</li>
+                <li>My resume</li>
+                <li>My contact</li>
+                <li>Timeline</li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="#"></a>Contact</li>
+          <li><a href="#"></a>Blogs</li>
+        </ul>
+      </div>
+      <div id="social">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-google"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </nav>
+    <section class="banner">
+      <div class="subBanner">
+        <div class="clippy">
+          <h2>Lorem ipsum dolor sit.</h2>
+          <h1>
+            ALWAYS DELIVER <span>MORE</span> <br />
+            THAN <span>EXPECTED</span>
+          </h1>
+        </div>
 
+        <div class="card ps1"></div>
+        <div class="card ps2"></div>
+        <div class="card ps3"></div>
+        <div class="card ps4"></div>
+      </div>
+    </section>
+
+    <div class="card1"></div>
+    <div class="card1"></div>
+    <div class="card1"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
-      function bmi() {
-        let height = document.getElementById("h").value;
-        let weight = document.getElementById("w").value;
-        let bmi = weight / (((height / 100) * height) / 100);
-        let total = bmi.toFixed(2);
-        document.getElementById("finalresult").innerHTML = total;
+      $(document).ready(function () {
+        $(".click").on("click", function () {
+          $(".subclick").toggleClass("fa-angle-up");
+          $(".subclick").toggleClass("fa-angle-down");
+        });
+        $(".click").click(function () {
+          $(".subNav").toggle();
+        });
 
-        // validation
-
-        if (height == "") {
-          document.getElementById("hErorr").innerHTML =
-            "** Please inter height";
-        }
-        if (weight == "") {
-          document.getElementById("wErorr").innerHTML =
-            "** Please inter weight";
-        }
-      }
+        $(".fa-bars").click(function () {
+          $(".navRight").animate({
+            height: "toggle",
+          });
+        });
+      });
     </script>
   </body>
 </html>
