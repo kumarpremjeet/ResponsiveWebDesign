@@ -113,7 +113,7 @@ nav {
   height: 76vh;
   background-image: url(https://cdn.pixabay.com/photo/2021/08/04/15/45/waterfall-6522033_960_720.jpg);
   background-size: 100% 76vh;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
 }
 .subBanner {
   width: 100%;
