@@ -4,91 +4,154 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic of media query</title>
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Fira+Sans:ital@1&family=Josefin+Sans:wght@600;700&family=Montserrat:wght@100;300;400&family=Mukta:wght@500&family=Murecho:wght@900&family=Open+Sans:ital,wght@0,300;1,300&family=Outfit:wght@300&family=Raleway:ital,wght@1,200&family=Roboto:wght@300;400&family=Rowdies:wght@700&family=Rubik&family=Source+Code+Pro&family=Titillium+Web&family=Yuji+Boku&display=swap"
-      rel="stylesheet"
-    />
-    <!-- google fonts end -->
-    <!-- font awesome kit -->
+    <title>Responsive web design example</title>
     <script
       src="https://kit.fontawesome.com/ffd161b5f3.js"
       crossorigin="anonymous"
     ></script>
-    <!-- fontawesome kit end -->
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <nav>
-      <div class="navLeft">
-        <h1>Company</h1>
+      <div class="left">
+        <h1>RWD Design</h1>
       </div>
-      <div class="navMid"><i class="fas fa-bars"></i></div>
-      <div class="navRight">
+      <div class="mid">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="right">
         <ul>
-          <li><a href="#"></a>Home</li>
-          <li class="click">
-            <a href="#"></a>About
-            <span>
-              <i class="fas fa-angle-down subclick"></i>
-            </span>
-            <div class="subNav">
-              <ul>
-                <li>About me</li>
-                <li>My resume</li>
-                <li>My contact</li>
-                <li>Timeline</li>
-              </ul>
-            </div>
+          <li>
+            <a href="#">Home</a>
           </li>
-          <li><a href="#"></a>Contact</li>
-          <li><a href="#"></a>Blogs</li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Blogs</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
         </ul>
       </div>
-      <div id="social">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-google"></i>
-        <i class="fab fa-linkedin-in"></i>
-      </div>
     </nav>
-    <section class="banner">
-      <div class="subBanner">
-        <div class="clippy">
-          <h2>Lorem ipsum dolor sit.</h2>
-          <h1>
-            ALWAYS DELIVER <span>MORE</span> <br />
-            THAN <span>EXPECTED</span>
-          </h1>
-        </div>
-
-        <div class="card ps1"></div>
-        <div class="card ps2"></div>
-        <div class="card ps3"></div>
-        <div class="card ps4"></div>
+    <section class="container">
+      <div class="col-8">
+        <img src="images/microsoft-365--bX6sdYw48s-unsplash.jpg" alt="" />
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at
+          repellat dolor aperiam atque?
+        </p>
+      </div>
+      <div class="col-8">
+        <img src="images/microsoft-365-bsy0-z5RTfk-unsplash.jpg" alt="" />
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at
+          repellat dolor aperiam atque?
+        </p>
+      </div>
+      <div class="col-8">
+        <img src="images/microsoft-365-jMEs4objgIA-unsplash.jpg" alt="" />
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at
+          repellat dolor aperiam atque?
+        </p>
+      </div>
+      <div class="col-8">
+        <img src="images/microsoft-365-UEVeZOUYHGw-unsplash.jpg" alt="" />
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at
+          repellat dolor aperiam atque?
+        </p>
+      </div>
+      <div class="col-8">
+        <img src="images/surface-2T-B5o8ckXc-unsplash.jpg" alt="" />
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at
+          repellat dolor aperiam atque?
+        </p>
+      </div>
+      <div class="col-8">
+        <img src="images/surface-OWWf1Uq85T8-unsplash.jpg" alt="" />
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at
+          repellat dolor aperiam atque?
+        </p>
+      </div>
+      <div class="col-8">
+        <img src="images/surface-Pfmow4b9GAY-unsplash.jpg" alt="" />
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at
+          repellat dolor aperiam atque?
+        </p>
+      </div>
+      <div class="col-8">
+        <img src="images/taisiia-shestopal-qJ5ncNYEg9c-unsplash.jpg" alt="" />
+        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit at
+          repellat dolor aperiam atque?
+        </p>
       </div>
     </section>
+    <!-- about section -->
+    <section class="about">
+      <div class="image">
+        <h2>About me , The web designer</h2>
+        <img
+          src="images/collins-lesulie-0VEDrQXxrQo-unsplash.jpg"
+          alt="about img"
+        />
+        <h3>What can we do?</h3>
 
-    <div class="card1"></div>
-    <div class="card1"></div>
-    <div class="card1"></div>
+        <span>With Passion For Real, Designing</span>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, tenetur
+        eos saepe corporis unde natus magni nobis soluta, consectetur, fugiat
+        pariatur! Placeat necessitatibus eos debitis ex? Aperiam magnam
+        voluptates consequuntur blanditiis modi, impedit debitis recusandae
+        quidem possimus ad nemo nobis voluptatum voluptas dolorem dolorum
+        praesentium ab officia! Explicabo fugiat amet fuga expedita dolorem
+        laboriosam suscipit. Impedit fuga autem qui maiores odio odit quisquam
+        nemo ipsa velit, exercitationem praesentium in nobis asperiores.
+        Praesentium, fuga veritatis. Obcaecati.
+      </p>
+    </section>
+    <footer>
+      <div class="col3">
+        <h2>Footer</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+          temporibus, veniam dignissimos tempore ipsa blanditiis!
+        </p>
+        <p>&copy; All right resurved by Prem</p>
+      </div>
+      <div class="col3 ">
+        <h2>Blog Post</h2>
+        <p><a href="#">Link-1</a>&nbsp; &nbsp; &nbsp; <a href="#">Link-3</a></p>
+        <p><a href="#">Link-2</Link-2></a></p>
+        <p><a href="#">Link-3</a></p>
+      </div>
+      <div class="col3 col2">
+        <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=mohan%20nagar%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
       $(document).ready(function () {
-        $(".click").on("click", function () {
-          $(".subclick").toggleClass("fa-angle-up");
-          $(".subclick").toggleClass("fa-angle-down");
-        });
-        $(".click").click(function () {
-          $(".subNav").toggle();
-        });
-
         $(".fa-bars").click(function () {
-          $(".navRight").animate({
+          $(".right").animate({
             height: "toggle",
           });
         });
